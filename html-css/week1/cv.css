@@ -1,0 +1,208 @@
+/*Style for  parent container Area*/
+.container {
+    padding-left: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Style for one child container Area*/
+.containerhead {
+    background-color: gray;
+    scroll-behavior: smooth;
+    flex-basis: 50%;
+    flex: 1;
+}
+
+/*Style for  the another child caontainer Area*/
+
+.containermain {
+    padding-left: 30px;
+    padding-bottom: 10px;
+    flex-basis: 50%;
+    flex: 2;
+}
+
+/*Style  for the image*/
+img {
+    border: 5px solid gainsboro;
+    box-shadow: 3px, 3px, 10px, rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/*Style  for left-sdie nav bar*/
+ul {
+    list-style-type: none;
+    margin-right: 20px;
+    padding-left: 10px;
+    width: 300px;
+    background-color: gray;
+}
+
+.navigation li a {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    color: #000;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.navigation li a:hover {
+    background-color: gray;
+    color: white;
+}
+
+/*Style  for main area that contains personal-details and professional summary*/
+main {
+    margin: auto;
+    align-content: left;
+}
+
+.personal-details {
+    padding-left: 15px;
+    align-content: center;
+
+}
+
+/*Style  for all fa class elements*/
+.fa {
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    background-color: aliceblue;
+}
+
+.fa-home {
+    color: grey;
+}
+
+.fa-envelope {
+    color: grey;
+}
+
+.fa-phone {
+    color: grey;
+}
+
+.fa-linkedin {
+    padding: 0 20px;
+    color: grey;
+
+}
+
+.fa-github {
+    padding: 0 20px;
+    color: grey;
+}
+
+.fa-codepen {
+    padding: 0 20px;
+    color: grey;
+}
+
+/*Style  for article tag */
+article {
+    padding: 5px 15px;
+}
+
+/*Style  for techskill and lanskill  Section*/
+
+.allskill {
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lanskill {
+    padding-bottom: 10px;
+    flex-basis: 50%;
+    flex: 1;
+}
+
+.techskill {
+    padding-bottom: 10px;
+    flex-basis: 50%;
+    flex: 1;
+}
+
+.container-skill {
+    width: 50%;
+    background-color: grey;
+}
+
+.skill {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    color: black;
+}
+
+
+/*Style  for  technical skill Section */
+.maximo {
+    width: 80%;
+    background-color: gainsboro;
+}
+
+.db2 {
+    width: 40%;
+    background-color: gainsboro;
+}
+
+.java {
+    width: 20%;
+    background-color: gainsboro;
+}
+
+.html {
+    width: 10%;
+    background-color: gainsboro;
+}
+
+/*Style  for  language skill Section */
+.bengali {
+    width: 100%;
+    background-color: gainsboro;
+}
+
+.english {
+    width: 80%;
+    background-color: gainsboro;
+}
+
+.hindi {
+    width: 70%;
+    background-color: gainsboro;
+}
+
+.danish {
+    width: 10%;
+    background-color: gainsboro;
+}
+
+/*Ending stylying for skill section */
+
+/*Style  for  footer section */
+.education {
+    padding-top: 5px;
+    text-align: left;
+    color: grey;
+    font-size: 15px;
+}
+
+.education h4 {
+    color: black;
+    ;
+}
+
+span {
+    color: rgb(12, 12, 12);
+}
