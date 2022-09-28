@@ -125,6 +125,8 @@ main {
 @media screen and (max-width:760px) {
 
     main {
+        margin-right: 4.5rem;
+        margin-left: 2rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -173,7 +175,7 @@ main {
 @media screen and (max-width:760px) {
 
     .logogallery {
-        margin-right: 10rem;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -183,7 +185,6 @@ main {
     .row-3,
     .row-2,
     .row-1 {
-        background-color: rgb(9, 195, 195);
         margin-left: 0px;
         margin-right: 3rem;
         display: flex;
@@ -196,6 +197,8 @@ main {
     }
 
     .gallery-logo {
+        margin-right: 4.5rem;
+        margin-left: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -207,16 +210,16 @@ main {
         border-radius: 10px;
         font-size: 12px;
         padding-left: 5px;
-        width: 100px;
-        height: 100px;
-        background: gray;
+        width: 150px;
+        height: 50px;
+        background: whitesmoke;
         transition: width 2s, height 2s, transform 2s;
     }
 
     .style:hover {
-        width: 300px;
-        height: 300px;
-        transform: rotate(180deg);
+        width: 150px;
+        height: 100px;
+        transform: rotate(360deg);
     }
 
 }
@@ -241,12 +244,12 @@ main {
 
 @media screen and (max-width:760px) {
 
+
     .footer-container {
         background-color: rgb(14, 133, 237);
         font-size: 10px;
         margin-top: 5rem;
         padding-left: 7.2rem;
-        padding-right: 7.2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
