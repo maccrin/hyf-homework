@@ -1,0 +1,499 @@
+ * {
+     margin: 0px;
+     padding: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+/* page 1 styling */
+ .logo-nav {
+     padding: 1.25rem 6.25rem .62rem .62rem;
+     background-color: rgb(238, 221, 221);
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .logo-nav img {
+     width: 9.375rem;
+     height: 6.25rem;
+ }
+
+ nav {
+     padding-top: 1.87rem;
+     padding-right: 6.25rem;
+ }
+
+ img {
+     border: 1px solid rgb(103, 39, 50);
+     border-radius: 1.25rem;
+     box-shadow: 1.25rem 1.87rem 1.25rem pink inset;
+     height: 6.25rem;
+     width: 9.38rem;
+ }
+
+ nav a {
+     display: inline-block;
+     text-align: center;
+     height: 1.25rem;
+     width: 5rem;
+     border-radius: .62rem;
+     border: .13rem solid rgb(232, 137, 169);
+     background-color: rgb(219, 156, 156);
+     text-decoration: none;
+     color: rgb(24, 15, 2);
+
+ }
+
+ .containerblock {
+height: 20px;
+width:200px;
+display:block;
+width: 0%;
+border: 2px solid rgb(240, 168, 168);
+position: relative;
+z-index: 0;
+overflow: hidden;
+margin-bottom: 1.25rem;
+margin-left: 5.5rem;
+background-color: rgb(158, 130, 134);
+animation: progressbar 3s linear;
+animation-fill-mode: forwards;
+}
+
+.containerblock2 {
+    height: 20px;
+    width: 200px;
+    display: block;
+    border: 2px solid rgb(240, 168, 168);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    margin-left: 5.5rem;
+    background-color: rgb(158, 130, 134);
+    animation: progressbar2 3s linear;
+    animation-fill-mode: forwards;
+}
+ .containerblock3 {
+    height: 20px;
+     width: 200px;
+     display: block;
+    border: 2px solid rgb(240, 168, 168);
+     position: relative;
+     z-index: 0;
+     overflow: hidden;
+     margin-bottom: 1.25rem;
+     margin-left: 5.5rem;
+     background-color: rgb(158, 130, 134);
+     animation: progressbar3 3s linear;
+     animation-fill-mode: forwards;
+ }
+
+ .containerblock4 {
+     height: 20px;
+     width: 200px;
+     display: block;
+     border: 2px solid rgb(240, 168, 168);
+     position: relative;
+     z-index: 0;
+     overflow: hidden;
+     margin-bottom: 1.25rem;
+     margin-left: 5.5rem;
+     background-color: rgb(158, 130, 134);
+     animation: progressbar4 3s linear;
+     animation-fill-mode: forwards;
+ }
+/* animation part */
+ @keyframes progressbar {
+from { width:0%}
+to { width:20%; }
+
+ }
+
+ @keyframes progressbar2 {
+     from {
+         width: 20%
+     }
+     to {
+         width: 40%;
+     }
+
+ }
+
+ @keyframes progressbar3 {
+     from {
+         width: 40%
+     }
+     to {
+     width: 60%;
+     }
+
+ }
+ @keyframes progressbar4 {
+     from {
+         width: 60%
+     }
+
+     to {
+         width: 80%;
+     }
+
+ }
+
+ .text-style {
+     padding: 1.25rem 6.25rem 1.25rem 6.25rem;
+     font-size: 1.13rem;
+ }
+
+ legend {
+     text-align: center;
+     background-color: rgb(158, 130, 134);
+     color: black;
+     padding: .31rem .31rem;
+ }
+
+ .field{
+    min-width: 100%;
+     padding: 1.25rem 1.875 1.25rem 6.25rem;
+     background-color: rgb(158, 130, 134);
+ }
+
+ .form-row, .form-row1 {
+     padding: 1.25rem 1.875rem 1.25rem 1.25rem;
+     display: flex;
+    justify-content: flex-start;
+ }
+
+ .description {
+    flex: 1 2 20%;
+     font-size: .88rem;
+     padding: 1.25rem .63rem 1.25rem 1.25rem;
+ }
+
+ .description p {
+     padding-top: 1.25rem;
+ }
+
+ .textarea {
+    flex: 1 1 80%;
+     padding: 1.25rem 6.25rem 1.25rem 0px;
+ }
+
+ label {
+     margin-right: 1.25rem;
+     margin-left: 1.25rem;
+     margin-top: .5rem;
+     text-align: right;
+ }
+
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ input[type="tel"] {
+     border: 2px solid rgb(233, 205, 214);
+     border-radius: 10px;
+     display: block;
+     width: 300px;
+     height: 40px;
+     box-sizing: border-box;
+ }
+
+ .select {
+     border: 2px solid rgb(233, 205, 214);
+     border-radius: 0.625rem;
+     display: block;
+     width: 18.75rem;
+     height: 2.5rem;
+     padding: .625rem .313rem;
+     box-sizing: border-box;
+ }
+
+ .shipping {
+    padding: 2.25rem 3.125rem .62rem 1.5rem;
+    font-size: 1rem;
+ }
+
+  input.expand-button[type="checkbox"]:checked {
+   margin-top: 1.5rem;
+height: 2rem;
+width: 2rem;
+  }
+
+ .expandable {
+     visibility: visible;
+ }
+ input[type="checkbox"]:checked~.expandable {
+     visibility: collapse;
+ }
+
+ button[type="submit"] {
+     border: .125rem solid rgb(107, 89, 96);
+     border-radius: .625rem;
+     display: block;
+     width: 6.25rem;
+     height: 2.5rem;
+     padding: 0.625rem 0.625rem;
+     box-sizing: border-box;
+     background-color: rgb(236, 183, 201);
+ }
+
+ span {
+     display: inline;
+     color: rgb(46, 8, 8) !important;
+ }
+
+ .button {
+     padding-bottom: 50px;
+     display: flex;
+     justify-content: center;
+     align-self: center;
+ }
+
+ footer {
+     display: flex;
+     justify-content: flex-end;
+ }
+
+ .next {
+     cursor: pointer;
+     height: 6.25rem;
+     width: 12.5rem;
+     margin-top: 1.25rem;
+     margin-bottom: 6.25rem;
+     margin-left: auto;
+     border: 2px solid rgb(161, 81, 106);
+     border-radius: 0.313;
+     text-align: center;
+     font-size: 2rem;
+     background-color: rgb(219, 156, 156);
+     color: aliceblue;
+ }
+
+ .next a {
+     display: block;
+     font-size: 4rem;
+     text-decoration: none;
+     color: whitesmoke;
+     top: 50%;
+    
+ }
+/* media query for  page 1 */
+
+@media screen and (max-width:760px) {
+
+.logo-nav {
+    padding-left: 4rem;
+    background-color: rgb(238, 221, 221);
+    display: flex;
+    justify-content: space-around;
+}
+
+ nav {
+     padding-top: 0rem;
+     padding-left: 3rem;
+
+ }
+
+ nav a {
+     margin:.5rem;
+     text-align: center;
+     height: 1.25rem;
+
+ }
+
+ img {
+    margin-left:2rem;
+     margin-top: 1rem;
+ }
+
+  .text-style {
+    padding-left:1rem;
+
+ }
+
+ .field {
+    min-width: 100%;
+ }
+ .form-row  {
+    padding:  .31rem 0 .31rem .625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+ .form-row label {
+    text-align: left;
+    margin-bottom: .5rem;
+ }
+ .description p {
+    text-align: left;
+}
+.form-row1{
+display: flex;
+flex-direction: column;
+
+}
+textarea {
+max-width: 100%;
+}
+
+.shipping {
+    margin-left: 10px;
+    font-size: .8rem;
+}
+input.expand-button[type="checkbox"]:checked {
+    margin-top: 1rem;
+    height: 1rem;
+    width: 1rem;
+}
+.button{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10rem;
+}
+.next {
+    height: 2.25rem;
+        width: 4.5rem;
+    margin-right: auto;
+}
+.next a {
+    font-size: 2rem;
+}
+}
+
+ /* page 2 styling */
+
+ .radio {
+     padding: 1.25rem 1.875rem 1.50rem 1.25rem;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     font-weight: bold;
+ }
+
+ input[type='radio'] {
+     box-sizing: border-box;
+    appearance: none;
+     background: white;
+     outline: 0.063rem solid gray;
+     border: 0.063rem solid white;
+     width: 1.25rem;
+     height: 1.25rem;
+ }
+ 
+ input[type='radio']:checked {
+     background: rgb(141, 137, 137);
+ }
+/* responsive for page 2 */
+ @media screen and (max-width:760px) {
+.radio {
+    font-weight: normal;
+    font-size: .8rem;
+    display: flex;
+    justify-content: flex-start;
+ }
+ .radio label {
+
+margin-right: 1rem;
+ }
+
+input[type='radio'] {
+    margin-top: .5rem;
+   margin-left: 2rem;
+    appearance: none;
+height: .8rem;
+width: .8rem;
+}
+
+}
+ 
+/* page 3 styling */
+ input[type='checkbox'] {
+     width: 6.25rem;
+     height: 2.5rem
+ }
+
+ .checkbox1 {
+     display: flex;
+     flex-direction: column;
+     
+ }
+
+ .checkbox2 {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .checkbox {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+ }
+ .lebel-alignment {
+     margin: 0.625rem;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+ .imglebel-alignment {
+     padding-left: 1.875rem;
+     padding-top: 0.313rem;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+.img-gallery1,
+.img-gallery2 {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.checkbox-imagegallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+ img {
+     cursor: pointer;
+     height: 12.5rem;
+     width: 12.5rem;
+
+ }
+/* responsive for page 3 */
+ @media screen and (max-width:760px) {
+
+     input[type='checkbox'] {
+         width: 1.25rem;
+         height: 1.5rem
+     }
+     .imglebel-alignment label {
+         font-size: .8rem;
+         ;
+     }
+     .checkbox-imagegallery img {
+         cursor: pointer;
+         height: 4.5rem;
+         width: 4.5rem;
+     }
+
+     .img-gallery1,
+     .img-gallery2 {
+         display: flex;
+         flex-direction: column;
+
+     }
+     .checkbox-imagegallery {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+     }
+ }
+
+ /* responsive for last page */
+ @media screen and (max-width:760px) {
+input[type=date]{
+    width: 12.5rem;
+}
+
+ }

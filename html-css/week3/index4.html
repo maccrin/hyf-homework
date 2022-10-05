@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<header>
+        <div class="logo-nav">
+        <img src="Img/Logo.jpg" alt="brand_logo" >
+         <nav>
+            <a href="https://sofieschnoor.dk/" target="_blank">Women</a>
+            <a href="https://sofieschnoor.dk/" target="_blank">Girls</a>
+            <a href="https://sofieschnoor.dk/" target="_blank">Home</a>
+            <a href="https://sofieschnoor.dk/" target="_blank">Sale</a>
+         </nav>
+        </div>
+    </header>
+    <h1 class="text-style">Sign up to yourcustomtailor.com</h1>
+    <h2 class="text-style">step 4/4- time to learn about your preference</h2>
+    <h3 class="text-style">Progress</h3>
+    <div class="containerblock4">
+        <div class="animation"></div>
+    </div>
+    <form action="index.html" method="get">
+        <fieldset class="field">
+            <legend>Please Fill up the below details for further Process.</legend>
+            <p class="text-style">Please Fill Up The Card Details</p>
+            <div class="form-row">
+                <label for="cardhold">Card Holder Name:<span>*</span></label>
+                <input type="text" id="cardhold" name="custname" required />
+                <label for="cardnum">Card Number:<span>*</span></label>
+                <input type="text" id="cardnum" name="num" inputmode="numeric"  required />
+            </div>
+
+            <div class="form-row">
+                <label for="ctype">Card Type:<span>*</span></label>
+                <select id="ctype" name="Ctype" class="select" required>
+                    <option value="">Choose</option>
+                    <option value="master">Master</option>
+                    <option value="visa">Visa</option>
+                    <option value="visadebit">Visa-Debit</option>
+                    <option value="credit">Credit</option>
+                    <option value="amex">American-Exp</option>
+                    </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="expdate">Exp Date:<span>*</span></label>
+                        <input type="date" id="expdate" name="cardexpdate" required>
+                        <label for="cvv">CVV:<span>*</span></label>
+                        <input type="text" id="cvv" name="cardcvv" maxlength="3" placeholder="123" required>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Sign Up</button>
+                    </div>
+        </fieldset>
+        </form>
+        <footer>
+            <div class="next">
+                <a href="index.html" onclick="alert('Sign Up!');">Next</a>
+            </div>
+        </footer>
+        </body>
+        </html>

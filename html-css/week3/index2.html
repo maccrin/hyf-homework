@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<header>
+        <div class="logo-nav">
+        <img src="Img/Logo.jpg" alt="brand_logo" >
+         <nav>
+            <a href="https://sofieschnoor.dk/" target="_blank">Women</a>
+            <a href="https://sofieschnoor.dk/" target="_blank">Girls</a>
+            <a href="https://sofieschnoor.dk/" target="_blank">Home</a>
+            <a href="https://sofieschnoor.dk/" target="_blank">Sale</a>
+         </nav>
+        </div>
+    </header>
+    <h2 class="text-style">step 2/4- tell us about your details</h2>
+    <h3 class="text-style">Progress</h3>
+    <div class="containerblock2">
+        <div class="animation"></div>
+    </div>
+    <form action="index3.html" method="get">
+    <fieldset class="field">
+        <legend>Please Fill up the below details for further Process.</legend>
+            <div class="form-row">
+                
+                    <label for="mail">Email:<span>*</span></label>
+                    <input type="email" id="mail" name="mail" required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                   
+                    
+                    <label for="phone">Phone:<span>*</span></label>
+                    <input type="tel" id="phone" name="mobile" placeholder="123" required maxlength="14" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}" />
+                    
+            </div>
+            <div class="form-row">
+                
+            <label for="pwd">Password:<span>*</span></label>
+            <input type="password" id="pwd" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            
+            </div>
+            <div class="form-row">
+                
+            <label for="re-pwd"> Re-enter Password:<span>*</span></label>
+            <input type="password" id="re-pwd" required  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            
+            </div>
+            <p class="text-style">I want to sign up for the news letter</p>
+            <div class="radio">
+                <div>
+                <label for="news1">Weekly News</label>
+                <input type="radio" id="news1"  class="radio-button" name="news" value="Weekly"  />
+                </div>
+                <div>
+                <label for="news2">Monthly News</label>
+                <input type="radio" id="news2" class="radio-button"  name="news" value="Monthly" />
+                </div>
+                <div>
+                <label for="news3">Don't send me news</label>
+                <input type="radio" id="news3" class="radio-button"  name="news" value="No" />
+                </div>
+
+            </div>
+            <div class="button">
+                <button type="submit">Sign Up</button>
+            </div>
+            </fieldset>
+            </form>
+            <footer>
+                <div class="next">
+                    <a href="index3.html">Next</a>
+                </div>
+            </footer>
+            </body>
+            </html>
