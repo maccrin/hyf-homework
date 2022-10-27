@@ -34,11 +34,7 @@ let istudentExist = studentName => class07Students.find(name => name.toLowerCase
 //     else {
 //         return true;
 //     }
-// }
-
-const getNoOfStudents = class07Students => console.log(`The number of total students in the class is  ${class07Students.length}`);
-
-getNoOfStudents(class07Students);
+//}
 
 addStudentToClass("Isak");
 addStudentToClass("ISAK");
@@ -60,3 +56,5 @@ addStudentToClass(`Queen`);
 
 console.log('The list of all students in the class is ');
 console.log(class07Students);
+const getNoOfStudents = class07Students => console.log(`The number of total students in the class is  ${class07Students.length}`);
+getNoOfStudents(class07Students);
