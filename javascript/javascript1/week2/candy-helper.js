@@ -3,25 +3,26 @@ const myCandyBasket = [{ candyType: "sweet", pricePerGram: 0.5 }, { candyType: "
 const boughtCandyPrices = [];
 let amountToSpend = Math.random() * 100;
 let flag = true;
-console.log(`Total money in hand is ${amountToSpend}`);
 console.log(`My candy basket with there type and respective price  pergram is`);
 console.log(myCandyBasket);
 
 function addCandy(name, weight) {
     const totalPrice = getCandyPrice(name, weight);
-    console.log(`The total price of ${weight}gram ${name} is ${totalPrice}`);
-    if (amountToSpend > totalPrice) {
-        boughtCandyPrices.push({ candyType: name, CandyWeight: weight, CandyTotalPrice: totalPrice });
-        amountToSpend -= totalPrice;
-        console.log(`You have some more to spend for candies.`);
-        return amountToSpend;
+    boughtCandyPrices.push({ candyType: name, CandyWeight: weight, CandyTotalPrice: totalPrice });
+    amountToSpend -= totalPrice;
+    canBuyMoreCandy(amountToSpend, totalPrice);
+}
+function canBuyMoreCandy(handInMoney, expense) {
+    if (handInMoney >= expense) {
+        console.log(`You can buy more, so please do!`);
+        return flag;
     }
     else {
+        console.log(`Enough candy for you!`);
         flag = false;
-        console.log(`You have no more money for candy`);
+        return flag;
     }
 }
-
 
 function getCandyPrice(name, weight) {
     const candyName = myCandyBasket.find(candy => candy.candyType.toLowerCase() === name.toLowerCase());
@@ -36,8 +37,8 @@ while (flag) {
 
 
 }
-const totalSpent = boughtCandyPrices.reduce((accumulatore, currentvalue) =>
-    accumulatore + currentvalue.CandyTotalPrice, 0);
+const totalSpent = (boughtCandyPrices.reduce((accumulatore, currentvalue) =>
+    accumulatore + currentvalue.CandyTotalPrice, 0)).toFixed(2);
 
 console.log(`My Updated Candy basket with their respective total price is `)
 console.log(boughtCandyPrices);
