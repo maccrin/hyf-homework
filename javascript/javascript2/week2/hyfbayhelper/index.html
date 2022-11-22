@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Bay Helper</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Products Display</legend>
+        <div>
+            <h1 id="info"></h1>
+            <ul id="product"></ul>
+    </fieldset>
+    </div>
+    <div>
+        <ul id="list"></ul>
+    </div>
+    <form>
+        <fieldset>
+            <legend>Searching Criteria</legend>
+            <div class="price">
+                <label for="max-price">Maximum Price</label>
+                <input type="number" id="max-price" />
+                <label for="min-price">Minimum Price</label>
+                <input type="number" id="min-price" />
+            </div>
+            <div id="button1" class="filter">
+                <input type="button" id="click" value="Apply filter">
+                <input type="button" id="clear" value="Clear Filter">
+            </div>
+            <div id="sort" class="sorting">
+                <label for="radio1">Sort By Name</label>
+                <input type="radio" id="radio1" value="name" name="radio1">
+                <label for="radio2">Sort By Expensive</label>
+                <input type="radio" id="radio2" value="expen" name="radio1">
+                <label for="radio3">Sort By Cheap</label>
+                <input type="radio" id="radio3" value="cheap" name="radio1">
+                <label for="radio4">Sort By Rating</label>
+                <input type="radio" id="radio4" value="rat" name="radio1">
+            </div>
+            <div id='search' class="searching">
+                <label for="namesearch">Search By Name</label>
+                <input type="text" id="namesearch" />
+                <label for="pricesearch">Search by Maximum Price</label>
+                <input type="number" id="pricesearch" />
+            </div>
+        </fieldset>
+    </form>
+    <script src="hyfBayHelper.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
