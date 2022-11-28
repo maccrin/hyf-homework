@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="game.css" />
+</head>
+
+<body>
+    <h1 id="screen-msg">Game Time</h1>
+    <div class="msg">
+        <p id="error"></p>
+        <p id="counter"></p>
+    </div>
+
+    <div class="start">
+        <input type="number" id="duration" placeholder="game duration">
+        <input type="button" id="start" value="start">
+    </div>
+    <fieldset class="field">
+        <legend>Field</legend>
+        <section>
+
+            <div>
+                <p>S Key</p>
+                <p id="s-id"></p>
+                <p id="msg-s"></p>
+                <canvas class="result" id="s"></canvas>
+            </div>
+            <div>
+                <p>L Key</p>
+                <p id="l-id"></p>
+                <p id="msg-l"></p>
+                <canvas class="result" id="l"></canvas>
+            </div>
+        </section>
+    </fieldset>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.13/dist/index.min.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
