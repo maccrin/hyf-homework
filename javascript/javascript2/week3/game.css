@@ -1,0 +1,47 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(237, 232, 223)
+}
+
+h1 {
+    padding-left: 30rem;
+
+}
+
+.field {
+    margin-left: 10rem;
+    margin-right: 5rem;
+}
+
+* {
+    box-sizing: border-box;
+    color: rgb(79, 53, 5);
+}
+
+.msg,
+.start {
+    padding-left: 30rem;
+
+}
+
+#start,
+#duration {
+    padding: .5rem;
+    margin-bottom: 5rem;
+}
+
+section {
+    padding-left: 15rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10rem;
+}
+
+.result {
+    background-color: rgb(230, 215, 191);
+    width: 10rem;
+    height: 10rem;
+
+
+}
