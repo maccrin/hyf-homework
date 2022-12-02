@@ -1,6 +1,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(237, 232, 223)
+    background-color: rgb(237, 232, 223);
+    color: rgb(79, 53, 5);
 }
 
 h1 {
@@ -13,20 +14,14 @@ h1 {
     margin-right: 5rem;
 }
 
-* {
-    box-sizing: border-box;
-    color: rgb(79, 53, 5);
-}
-
 .msg,
 .start {
     padding-left: 30rem;
 
 }
 
-#start,
-#duration {
-    padding: .5rem;
+.start {
+    padding-left: 30rem;
     margin-bottom: 5rem;
 }
 
