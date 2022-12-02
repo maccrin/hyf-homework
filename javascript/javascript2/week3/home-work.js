@@ -26,7 +26,7 @@ const slogger = () => console.log(`saturn`);
 elogger();
 slogger();
 
-const planetLogFunction = (fun) => fun();
+const planetLogFunction = (funelogger) => funelogger();
 planetLogFunction(elogger);
 planetLogFunction(slogger);
 
