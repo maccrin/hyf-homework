@@ -1,0 +1,4 @@
+[{ "name": "Wilderswil", "country": "CH", "temp": "-2", "dish": ["Röstis", "Swiss Fondue", "Raclette"]},
+{ "name": "Chamonix", "country": "FR", "temp": 3, "dish": ["Baguette", "Choux à la Crème", "Madeleines"]},
+{ "name": "Copenhagen", "country": "DK", "temp": 4, "dish": ["Smorrebrod", "Herring", "Cardamom Buns"]}
+]
