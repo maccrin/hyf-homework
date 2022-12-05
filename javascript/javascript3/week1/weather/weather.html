@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <form>
+        <fieldset class="field">
+            <legend>
+                <h1>Weather Details</h1>
+            </legend>
+            <div class="weatherdetail">
+                <h2 id="city"></h2>
+                <h3 id="temperature"></h3>
+                <p id="icon"></p>
+                <p id="wind-speed"></p>
+                <p id="cloudy"></p>
+                <p id="sunrise"></p>
+                <p id="sunset"></p>
+            </div>
+        </fieldset>
+    </form>
+    <p id="error"></p>
+    <form>
+        <fieldset class="field">
+            <legend>
+                <h4>Search City and Select temperature Unit</h4>
+            </legend>
+            <div id="param">
+                <div>
+                    <input type="text" class="select" id='citySelect' placeholder="keyword to search">
+                </div>
+                <div>
+                    <select class="select" id="unit">
+                        <option value="metric">Celsius</option>
+                        <option value="imperial">Fahrenheit</option>
+                        <option value="standard" selected>Kelvin</option>
+                    </select>
+                </div>
+            </div>
+            <input type="button" class="select" id="btn-weather" value="Get Weather">
+            </div>
+        </fieldset>
+    </form>
+    <div id="map" class="mapdisplay"></div>
+
+
+    <script src="weather.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW2umimZdbckGGbJ8xeRv0EqYjwgaEwsY&libraries=&v=weekly"></script>
+</body>
+
+</html>
