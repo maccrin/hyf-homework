@@ -1,0 +1,25 @@
+body {
+    padding-top: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(237, 232, 223);
+    padding-left: 30rem;
+    padding-right: 10rem;
+    font-style: oblique;
+}
+
+.search {
+    padding-top: 2rem;
+    margin-left: 7rem;
+}
+
+.search input {
+    background-color: aquamarine;
+    height: 2rem;
+    width: 5rem;
+    font-weight: unset;
+}
+
+.display ul li {
+    margin-right: 2rem;
+    list-style: none;
+}
