@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form>
+        <fieldset class="conversion">
+            <legend>
+                <h4>Currency Conversion</h4>
+            </legend>
+            <div id="output" class="display"></div>
+            <div class="display">
+                <input type="number" id="amount">
+            </div>
+            <div id="currency" class="dropdown">
+                <label for="from">Base-Currency</label>
+                <select id="from">
+                </select>
+                <label for="to">Target-Currency</label>
+                <select id="to">
+                    <option value="DKK" Selected>DKK</option>
+                </select>
+                <label for="rate">Conversion-rate</label>
+                <select id="rate">
+                    <option value="7.46038" Selected>7.46038</option>
+                </select>
+            </div>
+            <div class="display">
+                <input type="button" class="button" id="getcurrency" value="GetConversionAmount">
+            </div>
+            <script src="secret.js"></script>
+            <script src="currency.js"></script>
+        </fieldset>
+    </form>
+</body>
+
+</html>
