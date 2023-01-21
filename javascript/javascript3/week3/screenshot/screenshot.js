@@ -1,5 +1,5 @@
 const BASE_URL = `https://crudcrud.com/api/${API_KEY}`
-let auth = 0;
+let auth = false;
 let duplicate = 0;
 const createNewScreenshotForm = document.getElementById('create-new-screenshot')
 const addUrlInput = document.getElementById('add-screenshot')
@@ -153,36 +153,41 @@ const createUser = async (e) => {
     e.preventDefault();
     duplicate = 0;
     console.log(users);
-    const body = {
-        mail: userEmail.value,
-        password: userPassWord.value
-    }
-    if (users.length > 0) {
-        users.forEach(eachUser => {
-            if (eachUser.mail === userEmail.value) {
-                alert(`email already exsits`);
-                duplicate = 1;
-            }
+    if (userEmail.value && userPassWord.value) {
+        const body = {
+            mail: userEmail.value,
+            password: userPassWord.value
+        }
+        if (users.length > 0) {
+            users.forEach(eachUser => {
+                if (eachUser.mail === userEmail.value) {
+                    alert(`email already exsits`);
+                    duplicate = 1;
+                }
 
+            })
+
+        }
+        if (duplicate == 1) return;
+        users.push(body);
+        const response = await fetch(`${BASE_URL}/blog`, {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
         })
 
+        const data = await response.json();
+        userContainer.appendChild(createUserDiv(data));
+        userEmail.value = '';
+        userPassWord.value = '';
+
     }
-    if (duplicate == 1) return;
-    users.push(body);
-    const response = await fetch(`${BASE_URL}/blog`, {
-        method: 'POST',
-        body: JSON.stringify(body),
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        }
-    })
-
-    const data = await response.json();
-    userContainer.appendChild(createUserDiv(data));
-    userEmail.value = '';
-    userPassWord.value = '';
-
+    else
+        alert(`Input fields are manadatory`)
+    return
 }
 //get user fucntion
 const getUsers =
@@ -265,8 +270,8 @@ const checkUserCredentials = async (event) => {
         blog.forEach(eachBlog => {
             if (eachBlog.mail && eachBlog.password) {
                 if (eachBlog.mail === userLogin.value && eachBlog.password === userPwd.value) {
-                    auth = 1;
-                    alert(`Credentials mathced and so can fetch screenshot`);
+                    auth = true;
+                    alert(`Credentials matched and so can fetch screenshot`);
                     userInputUrl.addEventListener('change', () => {
                         fetchUserScreenShot(eachBlog.mail)
                     })
@@ -274,7 +279,7 @@ const checkUserCredentials = async (event) => {
                 }
             }
         })
-        if (auth === 0)
+        if (auth === false)
             alert(`Invalid Credentials`)
     }
     else {
@@ -283,7 +288,7 @@ const checkUserCredentials = async (event) => {
 }
 //if login succesful then screenshot fecthing fucntion
 userInputUrl.addEventListener('change', () => {
-    if (auth === 0) {
+    if (auth === false) {
         alert(`Login to Fetch Screen Shot`);
         userInputUrl.value = ''
     }
@@ -294,11 +299,8 @@ const getUsersScreenShot = async () => {
     const data = await response.json();
     userScreenShots = data;
     console.log(userScreenShots)
-    userScreenShots = userScreenShots.filter(eachScreenShot => {
-        if (eachScreenShot.hasOwnProperty('userEmail') && eachScreenShot.hasOwnProperty('screenshot')) {
-            return eachScreenShot;
-        }
-    })
+    userScreenShots = userScreenShots.filter(eachScreenShot =>
+        (eachScreenShot.hasOwnProperty('userEmail') && eachScreenShot.hasOwnProperty('screenshot')))
     userScreenShots.forEach(user => userScreenShotContainer.appendChild(createUserScreenShot(user))
     )
 
