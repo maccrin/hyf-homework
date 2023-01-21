@@ -1,5 +1,5 @@
 const BASE_URL = `https://crudcrud.com/api/${API_KEY}`
-let auth = 0;
+let auth = false;
 let duplicate = 0;
 const createNewScreenshotForm = document.getElementById('create-new-screenshot')
 const addUrlInput = document.getElementById('add-screenshot')
@@ -152,7 +152,10 @@ const createUserDiv = (eachUser) => {
 const createUser = async (e) => {
     e.preventDefault();
     duplicate = 0;
-    console.log(users);
+    if (!userEmail.value || !userPassWord.value) {
+        alert(`Input fields empty`)
+        return;
+    }
     const body = {
         mail: userEmail.value,
         password: userPassWord.value
@@ -265,7 +268,7 @@ const checkUserCredentials = async (event) => {
         blog.forEach(eachBlog => {
             if (eachBlog.mail && eachBlog.password) {
                 if (eachBlog.mail === userLogin.value && eachBlog.password === userPwd.value) {
-                    auth = 1;
+                    auth = true;
                     alert(`Credentials mathced and so can fetch screenshot`);
                     userInputUrl.addEventListener('change', () => {
                         fetchUserScreenShot(eachBlog.mail)
@@ -274,7 +277,7 @@ const checkUserCredentials = async (event) => {
                 }
             }
         })
-        if (auth === 0)
+        if (auth === false)
             alert(`Invalid Credentials`)
     }
     else {
@@ -283,7 +286,7 @@ const checkUserCredentials = async (event) => {
 }
 //if login succesful then screenshot fecthing fucntion
 userInputUrl.addEventListener('change', () => {
-    if (auth === 0) {
+    if (auth === false) {
         alert(`Login to Fetch Screen Shot`);
         userInputUrl.value = ''
     }
