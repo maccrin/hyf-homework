@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="screenshot.css">
+    <title>Screenshot</title>
+</head>
+
+<body>
+    <main>
+        <h1 class=>Get a Screenshot</h1>
+        <form id="create-new-screenshot">
+            <fieldset>
+                <legend>Screen-Shot-Generate And Saved</legend>
+                <div class="form-field">
+                    <label class="label" for="add-screenshot">Screenshot url* required</label>
+                    <input type="text" class="input" id="add-screenshot" required/>
+                    <button class="button" id="save">Save</button>
+                </div>
+            </fieldset>
+        </form>
+        <div class="screenshot-input">
+            <h3>Screenshot's Url</h3>
+            <p id="show-screenshot"></p>
+        </div>
+        <div class="screenshot-container" id="screenshot-container">
+        </div>
+    </main>
+    <div id="create-user" class="create-usr">
+        <fieldset>
+            <legend> Create User</legend>
+            <input type="text" name="email" id="email" class="input" placeholder="email" required>
+            <input type="password" name="password" id="password" class="input" placeholder="password" required>
+            <button class="button" id="usercreate" class="input">Create User</button>
+        </fieldset>
+    </div>
+    <div class="user-screenshot" id="user-container">
+    </div>
+    <form id="create-new-userlogin">
+        <fieldset>
+            <legend>User Login Form</legend>
+            <input type="email" name="mail" id="mail" placeholder="email">
+            <input type="password" name="pwd" id="pwd" placeholder="password">
+            <button class="credentials" id="tocheckcredential">Log In</button>
+        </fieldset>
+    </form>
+    <form id="Loggedin-User-screenshot"class="LoggedInUser">
+        <fieldset>
+            <legend>LoggedIn-User-Screenshot</legend>
+            <label class="label">Give Url to Fetch ScreenShot*</label>
+            <input type="text" class="input" id="add-user-screenshot" />
+        </fieldset>
+    </form>
+    <div class="user-screenshot" id="user-screenshot-container"></div>
+    <script src="secret.js"></script>
+    <script src="screenshot.js"></script>
+</body>
+
+</html>
