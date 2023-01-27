@@ -1,6 +1,4 @@
 const BASE_URL = `https://crudcrud.com/api/${API_KEY}`
-let auth = false
-let duplicate = 0
 const createNewScreenshotForm = document.getElementById('create-new-screenshot')
 const addUrlInput = document.getElementById('add-screenshot')
 const screenShotContainer = document.getElementById('screenshot-container')
@@ -152,6 +150,25 @@ const createUserDiv = eachUser => {
     return div
 }
 //create user function
+const createUser = async (e) => {
+    e.preventDefault();
+    duplicate = 0;
+    console.log(users);
+    if (userEmail.value && userPassWord.value) {
+        const body = {
+            mail: userEmail.value,
+            password: userPassWord.value
+        }
+        if (users.length > 0) {
+            users.forEach(eachUser => {
+                if (eachUser.mail === userEmail.value) {
+                    alert(`email already exsits`);
+                    duplicate = 1;
+                }
+
+            })
+
+
 const createUser = async e => {
     e.preventDefault()
     duplicate = 0
@@ -179,13 +196,35 @@ const createUser = async e => {
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json'
+
         }
-    })
+        if (duplicate == 1) return;
+        users.push(body);
+        const response = await fetch(`${BASE_URL}/blog`, {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        })
+
+
+        const data = await response.json();
+        userContainer.appendChild(createUserDiv(data));
+        userEmail.value = '';
+        userPassWord.value = '';
+
+    }
+    else
+        alert(`Input fields are manadatory`)
+    return
 
     const data = await response.json()
     userContainer.appendChild(createUserDiv(data))
     userEmail.value = ''
     userPassWord.value = ''
+
 }
 //get user fucntion
 const getUsers = async () => {
@@ -264,26 +303,40 @@ const checkUserCredentials = async event => {
         console.log(blog)
         blog.forEach(eachBlog => {
             if (eachBlog.mail && eachBlog.password) {
+                if (eachBlog.mail === userLogin.value && eachBlog.password === userPwd.value) {
+                    auth = true;
+                    alert(`Credentials matched and so can fetch screenshot`);
                 if (
                     eachBlog.mail === userLogin.value &&
                     eachBlog.password === userPwd.value
                 ) {
                     auth = true
                     alert(`Credentials mathced and so can fetch screenshot`)
+
                     userInputUrl.addEventListener('change', () => {
                         fetchUserScreenShot(eachBlog.mail)
                     })
                 }
             }
         })
+
+        if (auth === false)
+            alert(`Invalid Credentials`)
+    }
+    else {
+
         if (auth === false) alert(`Invalid Credentials`)
     } else {
+
         console.log(`Empty Input`)
     }
 }
 //if login succesful then screenshot fecthing fucntion
 userInputUrl.addEventListener('change', () => {
     if (auth === false) {
+
+        alert(`Login to Fetch Screen Shot`);
+
         alert(`Login to Fetch Screen Shot`)
         userInputUrl.value = ''
     }
@@ -293,7 +346,10 @@ const getUsersScreenShot = async () => {
     const response = await fetch(`${BASE_URL}/blog`)
     const data = await response.json()
     userScreenShots = data
-    console.log(userScreenShots)
+    console.log(userScreenShots
+    userScreenShots = userScreenShots.filter(eachScreenShot =>
+        (eachScreenShot.hasOwnProperty('userEmail') && eachScreenShot.hasOwnProperty('screenshot')))
+    userScreenShots.forEach(user => userScreenShotContainer.appendChild(createUserScreenShot(user
     userScreenShots = userScreenShots.filter(eachScreenShot => {
         if (
             eachScreenShot.hasOwnProperty('userEmail') &&
