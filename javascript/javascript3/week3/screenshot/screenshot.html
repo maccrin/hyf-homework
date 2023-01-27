@@ -6,24 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="screenshot.css">
-    <title>Screen shot</title>
+    <title>Screenshot</title>
 </head>
 
 <body>
     <main>
-        <h1 class="heading-1">Get a Screenshot</h1>
+        <h1 class=>Get a Screenshot</h1>
         <form id="create-new-screenshot">
             <fieldset>
                 <legend>Screen-Shot-Generate And Saved</legend>
                 <div class="form-field">
+
                     <label class="label" for="add-screenshot">Screenshot url*</label>
                     <input type="text" class="input" id="add-screenshot"  required/>
+
+                    <label class="label" for="add-screenshot">Screenshot url* required</label>
+                    <input type="text" class="input" id="add-screenshot" required/>
+
                     <button class="button" id="save">Save</button>
                 </div>
             </fieldset>
         </form>
         <div class="screenshot-input">
-            <h3>Show-ScreenShot-Url</h3>
+            <h3>Screenshot's Url</h3>
             <p id="show-screenshot"></p>
         </div>
         <div class="screenshot-container" id="screenshot-container">
@@ -32,8 +37,8 @@
     <div id="create-user" class="create-usr">
         <fieldset>
             <legend> Create User</legend>
-            <input type="text" name="email" id="email" class="input" placeholder="email">
-            <input type="password" name="password" id="password" class="input" placeholder="password">
+            <input type="text" name="email" id="email" class="input" placeholder="email" required>
+            <input type="password" name="password" id="password" class="input" placeholder="password" required>
             <button class="button" id="usercreate" class="input">Create User</button>
         </fieldset>
     </div>
@@ -47,14 +52,11 @@
             <button class="credentials" id="tocheckcredential">Log In</button>
         </fieldset>
     </form>
-    <form id="Loggedin-User-screenshot">
+    <form id="Loggedin-User-screenshot"class="LoggedInUser">
         <fieldset>
             <legend>LoggedIn-User-Screenshot</legend>
-            <!-- <label class="label">User-Email*</label>
-                    <input type="email" name="screen-shot-mail" id="screen-shot-mail" placeholder="email"> -->
             <label class="label">Give Url to Fetch ScreenShot*</label>
             <input type="text" class="input" id="add-user-screenshot" />
-            <!-- <button class="credentials" id="userinput">Save-User-Input</button> -->
         </fieldset>
     </form>
     <div class="user-screenshot" id="user-screenshot-container"></div>

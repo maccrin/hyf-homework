@@ -1,0 +1,25 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(228, 214, 188);
+    padding-left: 20rem;
+    padding-right: 10rem;
+    padding-top: 2rem;
+    font-style: oblique;
+
+}
+
+.dropdown {
+    padding-top: 1rem;
+    padding-left: 5rem;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.button {
+    background-color: rgb(246, 240, 228);
+    font-style: italic;
+}
