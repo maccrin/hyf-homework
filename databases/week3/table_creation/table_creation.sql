@@ -1,4 +1,3 @@
-
 CREATE TABLE `meal` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `title`  varchar(255)  NULL,
