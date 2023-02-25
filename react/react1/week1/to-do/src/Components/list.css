@@ -1,0 +1,28 @@
+.header {
+font-family:Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight:bolder;
+  font-style: oblique;
+  color: rgb(232, 232, 7);
+  margin: 2rem;
+  text-align: center;
+  }
+.list{
+    list-style: none;
+      color: rgb(199, 146, 146);
+      font-size: medium;
+      font-weight: lighter;
+      font-style: italic;
+}
+.eachitem {
+margin: 2rem;
+}
+.deadline {
+    color: rgb(235, 20, 20);
+      animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+  from {color: rgb(227, 211, 211);}
+  to {color: rgb(234, 13, 13);}
+}
