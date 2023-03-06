@@ -1,0 +1,66 @@
+.header {
+font-family:Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight:bolder;
+  font-style: oblique;
+  color: rgb(44, 44, 8);
+  margin: 2rem;
+  text-align: center;
+  }
+.item{
+    /* width: 50%; */
+    list-style: none;
+      color: rgb(199, 146, 146);
+      font-size:x-large;
+      font-weight: bold;
+      font-style: italic;
+      margin: .5rem;
+      display: flex;
+      justify-content: space-around;
+ 
+
+}
+.add{
+    width: 50%;
+padding: 5rem;
+    display: flex;
+    justify-content:space-around;
+    margin:auto;
+    
+}
+.checked{
+  text-decoration: line-through;
+}
+.list{
+    display: flex;
+    justify-content:center;
+    list-style: none;
+      margin: 2rem;
+      text-align: center;
+      text-decoration: none;
+}
+.label{
+    color: rgb(232, 135, 8);
+    font-style: italic;
+    /* display: flex;
+    justify-content: space-around; */
+}
+.button {
+  border: 1px solid,rgb(48, 45, 45);
+background-color: rgb(191, 185, 180);
+font-size: 1rem;
+font-style: italic;
+font-weight: lighter;
+margin:1rem,2rem;
+padding:.5rem;
+color:rgb(79, 74, 74);
+text-align: center;
+}
+.add-button{
+display: flex;
+justify-content: center;
+
+}
+.children{
+    border: 1px solid rgb(47, 44, 44);
+}
