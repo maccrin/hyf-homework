@@ -1,0 +1,14 @@
+.list{
+    list-style: none;
+    text-align: center;
+}
+.header{
+    text-align: center;
+}
+.container{
+   margin-left:auto;
+    
+}
+.child{
+    border: 1px solid black;
+}
