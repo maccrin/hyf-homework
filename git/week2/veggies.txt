@@ -1,5 +1,7 @@
 capcicum
 carrot
-cabbage
+brocoli
 cauliflower
 chilli
+potato
+spinach
