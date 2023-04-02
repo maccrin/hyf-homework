@@ -1,7 +1,9 @@
 capcicum
 carrot
 brocoli
-cauliflower
 chilli
 potato
 spinach
+squash
+cauliflower
+chilli
