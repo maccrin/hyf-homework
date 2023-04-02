@@ -17,9 +17,10 @@ contactsAPIRouter.get("/", async (req, res) => {
         const orderBy = req.query.sort.toString().split(" ");
         console.log(orderBy)
         if (orderBy[1]) {
-            console.log('hello')
-            if ((orderBy[0].includes('last_name') && orderBy[1].includes('desc'))) query = query.orderBy('last_name', 'desc')
-            else if ((orderBy[0].includes('first_name') && orderBy[1].includes('desc'))) query = query.orderBy('first_name', 'desc')
+            const descPattern = /desc/gi;
+            const ascPattern = /asc/gi;
+            if (orderBy[0].includes('last_name') && descPattern.test(orderBy[1])) query = query.orderBy('last_name', 'desc')
+            else if (orderBy[0].includes('first_name') && descPattern.test(orderBy[1])) query = query.orderBy('first_name', 'desc')
             else if (orderBy[0].includes('last_name')) query = query.orderBy('last_name')
             else {
                 query = query.orderBy('first_name')

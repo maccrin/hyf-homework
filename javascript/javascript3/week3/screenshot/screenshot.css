@@ -1,57 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    padding-left: 10rem;
-    background-color: beige;
-    padding-top: 5rem;
-
+  padding-left: 10rem;
+  background-color: beige;
+  padding-top: 5rem;
 }
 
 form {
-    width: 70%;
-    height: 70%;
+  width: 70%;
+  height: 70%;
 }
 
 .form-field,
 .screenshot-container,
 .user-screenshot,
 .screenshot-input {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    justify-content: space-around;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
-.create-usr fieldset {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 70%;
-    height: 70%;
-    display: flex;
-    justify-content: space-around;
+fieldset {
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  height: 70%;
+}
+.form-field {
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  margin-left: 2rem;
+}
+.create-usr {
+  padding-right: 2rem;
 }
 
-
-#create-new-userlogin fieldset {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    height: 70%;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-}
-
-#Loggedin-User-screenshot fieldset {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    height: 70%;
-    display: flex;
-    justify-content: space-around;
-
+.LoggedInUser {
+  margin-top: 2rem;
 }

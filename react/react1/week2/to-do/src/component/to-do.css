@@ -1,0 +1,46 @@
+.header {
+font-family:Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight:bolder;
+  font-style: oblique;
+  color: rgb(44, 44, 8);
+  margin: 2rem;
+  text-align: center;
+  }
+.item{
+    list-style: none;
+      color: rgb(199, 146, 146);
+      font-size:x-large;
+      font-weight: bold;
+      font-style: italic;
+      margin: .5rem;
+  
+}
+.add{
+  width:50%;
+    display: flex;
+    justify-content:space-around;
+    margin:auto;
+}
+.checked{
+  text-decoration: line-through;
+}
+.list{
+    display: flex;
+    justify-content:center;
+    list-style: none;
+      margin: 2rem;
+      text-align: center;
+      text-decoration: none;
+}
+.button {
+  border: 2px solid,rgb(48, 45, 45);
+background-color: rgb(191, 185, 180);
+font-size: 1rem;
+font-style: italic;
+font-weight: lighter;
+border:none;
+margin:1rem,2rem;
+color:rgb(79, 74, 74);
+text-align: center;
+}
