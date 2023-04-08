@@ -1,5 +1,7 @@
 cabbage
 onion
-potato
+ sweet-potato
 tomato
 chilli
+brocoli
+capcicum
